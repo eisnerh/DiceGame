@@ -15,9 +15,9 @@ namespace DiceGame
             int playerPoints = 0;
             int enemyPoints = 0;
             Random random = new Random();
-            for(int i = 0; i < 10; i++)
+            Console.WriteLine("Press any key to roll the dice. ");
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Press any key to roll the dice. ");
                 playerRandomNum = random.Next(1, 7);
                 Console.WriteLine("You rolled a " + playerRandomNum);
                 Console.WriteLine(".......");
@@ -41,12 +41,16 @@ namespace DiceGame
                 Console.WriteLine("The Score now is - Enemy : " + enemyPoints);
                 
             }
-            if (playerPoints>enemyPoints) 
+            if (playerPoints > enemyPoints) 
             {
                 Console.WriteLine("Player Won!!!");
-            } else
+            } else if (playerPoints < enemyPoints)
             {
                 Console.WriteLine("Enemy Won!!!");
+            }
+            else
+            {
+                Console.WriteLine("It's a draw!!!");
             }
             Console.ReadKey();
         }
