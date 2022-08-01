@@ -22,8 +22,8 @@ namespace DiceGame
                 System.Threading.Thread.Sleep(1000);
                 enemyRandomNum = random.Next(1, 7);
                 Console.WriteLine("Enemy AI rolled a " + enemyRandomNum);
-                Console.ReadKey();
             }
+            Console.ReadKey();
         }
     }
 }
